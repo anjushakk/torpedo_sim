@@ -15,7 +15,7 @@ source install/setup.bash
 
 ```
 
-### **2. Launching the Simulation (Backend)**
+### **2. Launching the Simulation **
 
 This command starts the Gazebo physics engine, loads the `underwater_world`, spawns the `tethys` model, and activates the `ros_gz_bridge`.
 
@@ -25,7 +25,7 @@ ros2 launch torpedo_sim sim.launch.py
 
 ```
 
-### **3. Launching Visualization (Frontend)**
+### **3. Launching Visualization **
 
 This starts RViz2 and the `robot_state_publisher` to visualize the robot's structure and sensor data.
 
