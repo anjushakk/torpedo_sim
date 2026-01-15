@@ -3,6 +3,11 @@
 # **Torpedo Simulation Project (ROS 2 + Gazebo)**
 
 **Overview:** This project simulates the Tethys LRAUV (Long Range Autonomous Underwater Vehicle) using Gazebo for physics and ROS 2 for control, connected via a bridge.
+### **Git Clone**
+```bash
+git clone https://github.com/anjushakk/torpedo_sim.git
+
+```
 
 ### **1. Setup & Build**
 
@@ -14,6 +19,8 @@ colcon build
 source install/setup.bash
 
 ```
+Now, add the clonned package to src inside new_ws: new_ws/src/torpedo_sim
+
 
 ### **2. Launching the Simulation**
 
