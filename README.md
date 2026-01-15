@@ -1,6 +1,3 @@
-Here is the complete project documentation formatted as a `README.md` file. You can save this as `README.md` in the root of your repository.
-
-```markdown
 # Torpedo Simulation Project (ROS 2 + Gazebo)
 
 **Project Overview**
@@ -17,10 +14,6 @@ Every time you modify C++ code or change configuration files, rebuild the projec
 cd ~/new_ws
 colcon build
 source install/setup.bash
-
-```
-
----
 
 ## 2. Launching the Simulation
 
