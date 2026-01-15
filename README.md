@@ -51,14 +51,6 @@ python3 src/torpedo_sim/scripts/teleop_node.py
 
 ```
 
-**Option B: C++ Teleop (If compiled)**
-
-```bash
-# Terminal 3
-source install/setup.bash
-ros2 run torpedo_sim teleop_node
-
-```
 
 **Controls:**
 
@@ -75,7 +67,7 @@ If the robot does not move, use these commands to force specific actions and che
 
 ```bash
 ros2 topic list
-# You should see: /cmd_vel, /tethys/vertical_fins, /joint_states
+# You should see: /tethys/vertical_fins, /joint_states
 
 ```
 
