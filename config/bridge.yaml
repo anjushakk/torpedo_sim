@@ -1,0 +1,36 @@
+# Propeller Command
+- gz_topic_name: "/model/tethys/joint/propeller_joint/cmd_pos"
+  ros_topic_name: "/model/tethys/joint/propeller_joint/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: "ROS_TO_GZ"
+
+# Horizontal Fins
+- gz_topic_name: "/model/tethys/joint/horizontal_fins_joint/0/cmd_pos"
+  ros_topic_name: "/tethys/horizontal_fins"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: "ROS_TO_GZ"
+
+# Vertical Fins
+- gz_topic_name: "/model/tethys/joint/vertical_fins_joint/0/cmd_pos"
+  ros_topic_name: "/tethys/vertical_fins"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: "ROS_TO_GZ"
+  
+  # --- Visualization Topics ---
+
+# 1. Joint States (Fins moving)
+- gz_topic_name: "/world/multi_lrauv/model/tethys/joint_state"
+  ros_topic_name: "/joint_states"
+  ros_type_name: "sensor_msgs/msg/JointState"
+  gz_type_name: "ignition.msgs.Model"
+  direction: "GZ_TO_ROS"
+
+# 2. Pose / TF (Body moving)
+- gz_topic_name: "/model/tethys/pose"
+  ros_topic_name: "/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "ignition.msgs.Pose_V"
+  direction: "GZ_TO_ROS"

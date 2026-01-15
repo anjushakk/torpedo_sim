@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<robot name="tethys">
+
+  <link name="tethys/base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://torpedo_sim/models/tethys/meshes/newbase.dae"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/> 
+    </visual>
+  </link>
+
+  <link name="horizontal_fins">
+    <visual>
+      <geometry>
+        <mesh filename="package://torpedo_sim/models/tethys/meshes/horizontal.dae"/>
+      </geometry>
+    </visual>
+  </link>
+  
+<joint name="horizontal_fins_joint" type="revolute">
+    <parent link="tethys/base_link"/>
+    <child link="horizontal_fins"/>
+    
+    <origin xyz="-0.75 0 0" rpy="0 0 0"/> 
+    
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="0.5" effort="10" velocity="10"/>
+  </joint>
+
+ 
+  <link name="vertical_fins">
+    <visual>
+      <geometry>
+        <mesh filename="package://torpedo_sim/models/tethys/meshes/vertical.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+ <joint name="vertical_fins_joint" type="revolute">
+    <parent link="tethys/base_link"/>
+    <child link="vertical_fins"/>
+    
+    <origin xyz="-0.75 0 0" rpy="0 0 0"/>
+    
+    <axis xyz="0 0 1"/>
+    <limit lower="-0.5" upper="0.5" effort="10" velocity="10"/>
+  </joint>
+
+  <link name="propeller">
+     <visual>
+      <geometry>
+        <mesh filename="package://torpedo_sim/models/tethys/meshes/propeller.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="propeller_joint" type="continuous">
+    <parent link="tethys/base_link"/>
+    <child link="propeller"/>
+    <origin xyz="-1.4 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/> 
+  </joint>
+
+</robot>
